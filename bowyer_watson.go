@@ -54,6 +54,7 @@ func (t Triangle) ContainsPoint(p Point) bool {
 
 // Given an array of points, return an array of triangles of the triangulation
 // Super triangle is a triangle that contains all the points
+// Source for algorithm: paulbourke.net/papers/triangulate
 func DelaunayTriangulation(points []Point, super_triangle Triangle) []Triangle {
 	triangle_list := list.New()
 	triangle_list.PushBack(super_triangle)
